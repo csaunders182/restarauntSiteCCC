@@ -7,6 +7,12 @@
     <title>Document</title>
     <link
       rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
@@ -28,39 +34,74 @@
         <hr />
         <nav>
           <p>
-            <a href="RestaurantHomePage.html">Home</a>
-            <a href="Menu.html">Menu</a>
-            <a href="Contact.html">Contact Us</a>
+            <a href="RestaurantHomePage.html" class="badge-pill"><i class="fas fa-home"></i></a> |
+            <a href="Menu.html" class="badge-pill">Menu</a> |
+            <a href="Contact.html" class="badge-pill">Contact Us</a>
           </p>
         </nav>
         <hr />
       </header>
       <section class="container">
-        <img
-          src="images/restaurantFront.jpg"
-          alt="restaurant front"
-          style="border-radius: 50%; 
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          height: 300px
-          "
-        />
-        <h3>Welcome to the food lab</h3>
-        <p>
-          Welcome to Cole's Crazy Creations. We are a very experimental bunch
-          not unlike a group of mad scientist. We make it our mission to take
-          common ordinary meals and mutate them into something unique and
-          delicious. So plz sit down, take a sample or two and see what out
-          creations can do for your taste buds.
-        </p>
-        <div class="jumbotron pb-4">
-          <h1 class="display-4">New Location Coming Soon!</h1>
-          <p class="lead">
-            We are pleased to announce that in the year 2931 we will add our
-            first food lab on Planet Zebulon in the capital city of Perci-I-08.
-            We look forward to experimenting with you there soon.
-          </p>
+        <div class="row">
+          <img
+            src="images/restaurantFront.jpg"
+            alt="restaurant front"
+            style="border-radius: 50%; 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px
+            "
+          />
+        </div>
+
+        <br />
+        <div class="row">
+          <div class="container">
+            <h3>Welcome to the food lab</h3>
+            <p>
+              Welcome to Cole's Crazy Creations. We are a very experimental
+              bunch not unlike a group of mad scientist. We make it our mission
+              to take common ordinary meals and mutate them into something
+              unique and delicious. So plz sit down, take a sample or two and
+              see what out creations can do for your taste buds.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="container">
+            <div id="newCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel inner">
+                <div class="carousel-item active">
+                  <h1>We're Opening a new location! Come Visit as soon as you can. Second star to the right and straight on 'till morning.</h1>
+                </div>
+                <div class="carousel-item">
+                  <h1>
+                    We're rolling out our seasonal menu, with special options
+                    for this season.
+                  </h1>
+                </div>
+                <div class="carousel-item">
+                  <h1>The Drink of the Month is SG Special Brew. Try it and you will feel Super Great!</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="container"></div>
+            <div class="jumbotron pb-2">
+              <h1 class="display-4">New Location Coming Soon!</h1>
+              <p class="lead">
+                We are pleased to announce that in the year 2931 we will add our
+                first food lab on Planet Zebulon in the capital city of
+                Perci-I-08. We look forward to experimenting with you there
+                soon.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <footer class="container">
@@ -69,6 +110,7 @@
         <p>(999) 555-7268</p>
       </footer>
     </main>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -84,5 +126,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <noscript>This Website is best viewed with javascript enabled</noscript>
   </body>
 </html>

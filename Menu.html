@@ -7,6 +7,12 @@
     <title>Document</title>
     <link
       rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
@@ -23,64 +29,99 @@
         border: 1px solid black;
         padding: 5px 5px 5px 10px;
       }
+
+      article {
+        border: 1px solid darkgray;
+      }
     </style>
   </head>
   <body>
     <main>
-      <header>
+      <header class="container">
         <h1 class="restaurantName">Cole's Crazy Creations</h1>
         <hr />
         <nav>
           <p>
-            <a href="RestaurantHomePage.html">Home</a>
-            <a href="Menu.html">Menu</a>
-            <a href="Contact.html">Contact Us</a>
+            <a href="RestaurantHomePage.html" class="badge-pill"
+              ><i class="fas fa-home"></i
+            ></a>
+            | <a href="Menu.html" class="badge-pill">Menu</a> |
+            <a href="Contact.html" class="badge-pill">Contact Us</a>
           </p>
         </nav>
         <hr />
       </header>
-      <section>
-        <article>
-          <h4>Burger and Fries w/ Surprise</h4>
-          <p>Twist on a classic</p>
-          <p>a Description of item</p>
-          <p>$9.99</p>
-        </article>
-        <article>
-          <h4>Burger and Fries w/ Surprise</h4>
-          <p>Twist on a classic</p>
-          <p>a Description of item</p>
-          <p>$9.99</p>
-        </article>
-        <article>
-          <h4>Burger and Fries w/ Surprise</h4>
-          <p>Twist on a classic</p>
-          <p>a Description of item</p>
-          <p>$9.99</p>
-        </article>
-        <article>
-          <h4>Burger and Fries w/ Surprise</h4>
-          <p>Twist on a classic</p>
-          <p>a Description of item</p>
-          <p>$9.99</p>
-        </article>
-        <article>
-          <h4>Burger and Fries w/ Surprise</h4>
-          <p>Twist on a classic</p>
-          <p>a Description of item</p>
-          <p>$9.99</p>
-        </article>
-        <article>
-          <h4>Burger and Fries w/ Surprise</h4>
-          <p>Twist on a classic</p>
-          <p>a Description of item</p>
-          <p>$9.99</p>
-        </article>
-        <article>
+      <section class="container">
+        <div class="row">
+          <article class="col-sm">
+            <h4>Burger and Fries w/ Surprise</h4>
+            <p>Twist on a classic</p>
+            <p>
+              We took the awesome power of the hamburger and fused it with the
+              almighty orange.
+            </p>
+            <p>$9.99</p>
+          </article>
+          <article class="col-sm">
+            <div class="w-80">
+              <h4>Mutant Mashed Potatoes</h4>
+              <p>Evolved Potatoes</p>
+              <p>
+                Adapt or perish. A new take on a classic dish. Now has all the
+                components for a full meal. Ignore the green stuff that means
+                it's healthy.
+              </p>
+              <p>$9.99</p>
+            </div>
+          </article>
+          <article class="col-sm">
+            <h4>Crazy Chicken</h4>
+            <p>This pollo is truly loco</p>
+            <p>
+              We scoured the planet for the best possible chickens. They were
+              crazy enough to volunteer to become this delectible meal
+            </p>
+            <p>$9.99</p>
+          </article>
+        </div>
+        <div class="row">
+          <article class="col-sm">
+            <h4>Sub-Zero Sub</h4>
+            <p>One Cool Sandwich</p>
+            <p>
+              This is a cold serve sandwich. All the ingredients are served at
+              the lowest possible temperatures to preserve quality and taste.
+              Watch out for brain freeze!
+            </p>
+            <p>$9.99</p>
+          </article>
+          <article class="col-sm">
+            <div class="w-80">
+              <h4>Orange Chicken</h4>
+              <p>Wait actually orange chicken?</p>
+              <p>
+                Our orange chicken is not colored orange from ingredients. No,
+                we found actual orange chickens. Not to say the sauces aren't
+                amazing and will keep you craving another bite.
+              </p>
+              <p>$9.99</p>
+            </div>
+          </article>
+          <article class="col-sm">
+            <h4>Titanic Tater Tots</h4>
+            <p>Kid's food jumbofied</p>
+            <p>
+              We took the classic tater tot and blew them up to titanic
+              proportions. So much so that we could hollow out part of them and
+              pack them with veggies and meat.
+            </p>
+            <p>$9.99</p>
+          </article>
+        </div>
+        <hr />
+        <Label style="font-weight: bold">Beverages</Label>
+        <div class="row pl-2 pb-2">
           <table>
-            <caption style="font-weight: bold">
-              Beverages
-            </caption>
             <tr>
               <td>Root Beer</td>
               <td>$3.00</td>
@@ -98,9 +139,9 @@
               <td>$1.25</td>
             </tr>
           </table>
-        </article>
+        </div>
       </section>
-      <footer>
+      <footer class="container">
         <hr />
         <p>2341 Baron Street, KingCity, Wakanda, 99199</p>
         <p>(999) 555-7268</p>
@@ -121,5 +162,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <noscript>This Website is best viewed with javascript enabled</noscript>
   </body>
 </html>
