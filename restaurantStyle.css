@@ -1,0 +1,41 @@
+main {
+  background-color: black;
+}
+
+header,
+footer {
+  background-color: darkgreen;
+}
+
+h1 {
+  font-family: fantasy;
+}
+
+.restaurantName {
+  color: white;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+a {
+  font-weight: normal;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: yellow;
+}
+
+a:hover {
+  font-weight: bold;
+  color: cyan;
+}
+
+a:active {
+  text-decoration: none;
+  color: blueviolet;
+}

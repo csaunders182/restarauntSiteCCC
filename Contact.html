@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="restaurantStyle.css" />
+    <style>
+      section {
+        background-color: lightgray;
+      }
+      .requiredField {
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <main>
       <header>
-        <h1>Cole's Crazy Creations</h1>
+        <h1 class="restaurantName">Cole's Crazy Creations</h1>
         <hr />
         <nav>
           <p>
@@ -22,16 +31,18 @@
       </header>
       <section>
         <form action="">
-          <label for="name">Name:</label>
+          <label for="name" class="requiredField">Name:</label>
           <input type="text" name="name" id="name" />
           <br />
-          <label for="email">Email:</label>
+          <label for="email" class="requiredField">Email:</label>
           <input type="email" name="email" id="email" />
           <br />
-          <label for="phone">Phone:</label>
+          <label for="phone" class="requiredField">Phone:</label>
           <input type="text" name="phone" id="phone" />
           <br />
-          <label for="inquiryReason">Reason for Inquiry</label>
+          <label for="inquiryReason" class="requiredField"
+            >Reason for Inquiry
+          </label>
           <select name="inquiryReason" id="inquiryReason">
             <option value="default">Catering</option>
             <option value="privateParty">Private Party</option>
