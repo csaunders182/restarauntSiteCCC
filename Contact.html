@@ -30,11 +30,15 @@
         <h1 class="restaurantName">Cole's Crazy Creations</h1>
         <hr />
         <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-          <a href="RestaurantHomePage.html" class="nav-item nav-link badge-pill"
+          <a
+            href="RestaurantHomePage.html"
+            class="nav-item nav-link active badge-pill mr-1"
             ><i class="fas fa-home"></i
           ></a>
-          | <a href="Menu.html" class="nav-item nav-link badge-pill">Menu</a> |
-          <a href="Contact.html" class="nav-item nav-link active badge-pill"
+          <a href="Menu.html" class="nav-item nav-link badge-pill mr-1 ml-1"
+            >Menu</a
+          >
+          <a href="Contact.html" class="nav-item nav-link badge-pill ml-1"
             >Contact Us</a
           >
         </nav>
@@ -51,6 +55,7 @@
                 id="name"
                 class="form-control"
                 placeholder="Enter your name ..."
+                required
               />
             </div>
           </div>
@@ -63,6 +68,7 @@
                 id="email"
                 class="form-control"
                 placeholder="Enter your email ..."
+                required
               />
             </div>
           </div>
@@ -70,12 +76,15 @@
             <label for="phone" class="col-sm-2 col-form-label">Phone:</label>
             <div class="col-sm-6">
               <input
-                type="text"
+                type="tel"
                 name="phone"
                 id="phone"
                 class="form-control"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 placeholder="Enter your phone number ..."
+                required
               />
+              <div class="invalid-feedback">Valid format is XXX-XXX-XXXX</div>
             </div>
           </div>
           <div class="form-group row">
@@ -217,7 +226,35 @@
         <p>(999) 555-7268</p>
       </footer>
     </main>
-    <script src="contactForm.js"></script>
+    <!-- <script src="contactForm.js"></script> -->
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener(
+                "submit",
+                function(event) {
+                  event.preventDefault();
+                  if (form.checkValidity() === false) {
+                    event.stopPropagation();
+                  }
+                  form.classList.add("was-validated");
+                },
+                false
+              );
+            });
+          },
+          false
+        );
+      })();
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
