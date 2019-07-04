@@ -22,9 +22,6 @@
       section {
         background-color: lightgray;
       }
-      .requiredField {
-        font-weight: bold;
-      }
     </style>
   </head>
   <body>
@@ -32,73 +29,191 @@
       <header class="container">
         <h1 class="restaurantName">Cole's Crazy Creations</h1>
         <hr />
-        <nav>
-          <p>
-            <a href="RestaurantHomePage.html" class="badge-pill"
-              ><i class="fas fa-home"></i
-            ></a>
-            | <a href="Menu.html" class="badge-pill">Menu</a> |
-            <a href="Contact.html" class="badge-pill">Contact Us</a>
-          </p>
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+          <a href="RestaurantHomePage.html" class="nav-item nav-link badge-pill"
+            ><i class="fas fa-home"></i
+          ></a>
+          | <a href="Menu.html" class="nav-item nav-link badge-pill">Menu</a> |
+          <a href="Contact.html" class="nav-item nav-link active badge-pill"
+            >Contact Us</a
+          >
         </nav>
         <hr />
       </header>
       <section class="container">
-        <div class="form-group">
-          <form action="">
-            <label for="name" class="requiredField mt-2">Name:</label>
-            <input type="text" name="name" id="name" />
-            <br />
-            <label for="email" class="requiredField">Email:</label>
-            <input type="email" name="email" id="email" />
-            <br />
-            <label for="phone" class="requiredField">Phone:</label>
-            <input type="text" name="phone" id="phone" />
-            <br />
-            <label for="inquiryReason" class="requiredField"
+        <form action="" id="contactForm" class="needs-validation" novalidate>
+          <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label mt-2">Name:</label>
+            <div class="col-sm-6 mt-2">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter your name ..."
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email:</label>
+            <div class="col-sm-6">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter your email ..."
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+            <div class="col-sm-6">
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                class="form-control"
+                placeholder="Enter your phone number ..."
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="reason" class="col-sm-2 col-form-label"
               >Reason for Inquiry:
             </label>
-            <select name="inquiryReason" id="inquiryReason">
-              <option value="default">Catering</option>
-              <option value="privateParty">Private Party</option>
-              <option value="feedback">Feedback</option>
-              <option value="other">Other</option>
-            </select>
+            <div class="col-sm-3">
+              <select name="reason" id="reason" class="form-control">
+                <option value="catering">Catering</option>
+                <option value="privateParty">Private Party</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="additionalInfo" class="col-sm-2 col-form-label"
+              >Additional Information:</label
+            >
+            <div class="col-sm-6">
+              <textarea
+                name="additionalInfo"
+                id=""
+                cols="30"
+                rows="10"
+                class="form-control"
+              ></textarea>
+            </div>
             <br />
-            <label for="additionalInfo">Additional Information:</label>
-            <br />
-            <textarea
-              name="additionalInfo"
-              id=""
-              cols="30"
-              rows="10"
-            ></textarea>
-            <br />
-            <label>Have you visited us before?</label>
-            <input type="radio" name="previouslyVisited" id="yes" />
-            <label for="yes">Yes</label>
-            <input type="radio" name="previouslyVisited" id="no" />
-            <label for="no">No</label>
-            <br />
-            <label>Best day to contact you:</label>
-            <input type="checkbox" name="contactDays" id="monday" />
-            <label for="monday">M</label>
-            <input type="checkbox" name="contactDays" id="tuesday" />
-            <label for="tuesday">T</label>
-            <input type="checkbox" name="contactDays" id="wednesday" />
-            <label for="wednesday">W</label>
-            <input type="checkbox" name="contactDays" id="thursday" />
-            <label for="thursday">Th</label>
-            <input type="checkbox" name="contactDays" id="friday" />
-            <label for="friday">F</label>
-            <br />
-            <input type="submit" value="submit" class="mb-2" id="submit" />
-          </form>
-        </div>
+          </div>
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-2 pt-0">
+                Previously Visited:
+              </legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="previouslyVisited"
+                    id="yes"
+                    value="yes"
+                    checked
+                  />
+                  <label class="form-check-label" for="yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="previouslyVisited"
+                    id="no"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="no">
+                    No
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="form-group row">
+            <div class="col-sm-2">Best Days To Contact:</div>
+            <div class="col-sm-10">
+              <div class="form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="monday"
+                  name="contactDays"
+                />
+                <label class="form-check-label" for="monday">
+                  M
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="tuesday"
+                  name="contactDays"
+                />
+                <label class="form-check-label" for="tuesday">
+                  T
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="wednesday"
+                  name="contactDays"
+                />
+                <label class="form-check-label" for="wednesday">
+                  W
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="thursday"
+                  name="contactDays"
+                />
+                <label class="form-check-label" for="thursday">
+                  Th
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="friday"
+                  name="contactDays"
+                />
+                <label class="form-check-label" for="friday">
+                  F
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <input
+                type="submit"
+                value="submit"
+                class="btn btn-secondary mb-2"
+              />
+            </div>
+          </div>
+        </form>
       </section>
       <footer class="container">
         <hr />
-        <p>2341 Baron Street, KingCity, Wakanda, 99199</p>
+        <p>2341 Baron Street, KingCity, Wakanda, 99199, Earth</p>
         <p>(999) 555-7268</p>
       </footer>
     </main>

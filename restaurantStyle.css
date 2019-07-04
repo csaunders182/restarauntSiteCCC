@@ -5,10 +5,7 @@ main {
 header,
 footer {
   background-color: darkgreen;
-}
-
-h1 {
-  font-family: fantasy;
+  color: white;
 }
 
 .restaurantName {
@@ -16,6 +13,7 @@ h1 {
   width: 500px;
   margin: 0 auto;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
