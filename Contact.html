@@ -241,7 +241,7 @@
                 "submit",
                 function(e) {
                   //Prevent Default so page does not send
-                  //would be inside check validity but since we don't want it to send it is before the validity check
+                  //would be inside check validity but since we don't want it to send ever it is before the validity check
                   event.preventDefault();
                   if (form.checkValidity() === false) {
                     // e.preventDefault();
