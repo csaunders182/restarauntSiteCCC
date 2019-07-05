@@ -22,6 +22,12 @@
       section {
         background-color: lightgray;
       }
+      :required,
+      #nameLabel,
+      #emailLabel,
+      #phoneLabel {
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
@@ -45,9 +51,17 @@
         <hr />
       </header>
       <section class="container">
+        <noscript>
+          <p>This Website is best viewed with javascript enabled!</p>
+        </noscript>
         <form action="" id="contactForm" class="needs-validation" novalidate>
           <div class="form-group row">
-            <label for="name" class="col-sm-2 col-form-label mt-2">Name:</label>
+            <label
+              for="name"
+              class="col-sm-2 col-form-label mt-2"
+              id="nameLabel"
+              >Name:</label
+            >
             <div class="col-sm-6 mt-2">
               <input
                 type="text"
@@ -60,7 +74,9 @@
             </div>
           </div>
           <div class="form-group row">
-            <label for="email" class="col-sm-2 col-form-label">Email:</label>
+            <label for="email" class="col-sm-2 col-form-label" id="emailLabel"
+              >Email:</label
+            >
             <div class="col-sm-6">
               <input
                 type="email"
@@ -73,7 +89,9 @@
             </div>
           </div>
           <div class="form-group row">
-            <label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+            <label for="phone" class="col-sm-2 col-form-label" id="phoneLabel"
+              >Phone:</label
+            >
             <div class="col-sm-6">
               <input
                 type="tel"
@@ -220,10 +238,12 @@
           </div>
         </form>
       </section>
-      <footer class="container">
+      <footer class="container pb-1">
         <hr />
-        <p>2341 Baron Street, KingCity, Wakanda, 99199, Earth</p>
-        <p>(999) 555-7268</p>
+        <p class="text-center">
+          2341 Baron Street, KingCity, Wakanda, 99199, Earth
+        </p>
+        <p class="text-center">tel. +1 (999) 555-7268</p>
       </footer>
     </main>
     <!-- Script for validation -->
@@ -243,11 +263,17 @@
                   //Prevent Default so page does not send
                   //would be inside check validity but since we don't want it to send ever it is before the validity check
                   event.preventDefault();
+
+                  var confirm = true;
                   if (form.checkValidity() === false) {
                     // e.preventDefault();
+                    confirm = false;
                     event.stopPropagation();
                   }
                   form.classList.add("was-validated");
+                  if (confirm === true) {
+                    alert("Thank you for your info. We will contact you soon!");
+                  }
                 },
                 false
               );
@@ -272,7 +298,5 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-
-    <noscript>This Website is best viewed with javascript enabled</noscript>
   </body>
 </html>
